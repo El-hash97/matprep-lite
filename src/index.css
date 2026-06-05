@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type='number'] { -moz-appearance: textfield; }
+
+  input, select {
+    color-scheme: dark;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@layer components {
+  /* ── M tricolor stripe ─────────────────────────────────── */
+  .m-stripe {
+    height: 4px;
+    flex-shrink: 0;
+    background: linear-gradient(
+      to right,
+      #0066b1 0%, #0066b1 33.33%,
+      #1c69d4 33.33%, #1c69d4 66.66%,
+      #e22718 66.66%, #e22718 100%
+    );
+  }
+
+  /* ── Navigation sidebar ────────────────────────────────── */
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #7e7e7e;
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: color 120ms, background 120ms, border-color 120ms;
+  }
+  .nav-item:hover {
+    color: #ffffff;
+    background: rgba(255,255,255,0.03);
+  }
+  .nav-item.active {
+    color: #ffffff;
+    font-weight: 600;
+    border-left-color: #ffffff;
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* ── Cards ─────────────────────────────────────────────── */
+  .card {
+    background: #1a1a1a;
+    border: 1px solid #3c3c3c;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  /* ── Metric / product input cards ──────────────────────── */
+  .metric-card {
+    background: #1a1a1a;
+    border: 1px solid #3c3c3c;
+    border-radius: 0;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .accent-blue::before  { background: linear-gradient(to right, #0066b1, #1c69d4); }
+  .accent-teal::before  { background: #e22718; }
+  .accent-green::before { background: #ffffff; }
+  .accent-amber::before { background: #0fa336; }
+  .accent-coral::before { background: #e22718; }
+
+  /* ── Product tags ───────────────────────────────────────── */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 7px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 0;
+  }
+  .tag-blue  { background: rgba(28,105,212,0.12);  color: #4f8ef7; border: 1px solid rgba(28,105,212,0.35); }
+  .tag-teal  { background: rgba(226,39,24,0.12);  color: #e22718; border: 1px solid rgba(226,39,24,0.35); }
+  .tag-green { background: rgba(255,255,255,0.07); color: #ffffff; border: 1px solid rgba(255,255,255,0.25); }
+  .tag-amber { background: rgba(15,163,54,0.1);   color: #0fa336; border: 1px solid rgba(15,163,54,0.3); }
+
+  /* ── Field label ────────────────────────────────────────── */
+  .field-label {
+    display: block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7e7e7e;
+    margin-bottom: 6px;
+  }
+
+  /* ── Inputs ─────────────────────────────────────────────── */
+  .input-base {
+    width: 100%;
+    background: #262626;
+    border: 1px solid #3c3c3c;
+    border-radius: 0;
+    color: #ffffff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 8px 12px;
+    transition: border-color 120ms;
+    outline: none;
+  }
+  .input-base:focus { border-color: #ffffff; }
+
+  /* ── Buttons ─────────────────────────────────────────────── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid #3c3c3c;
+    background: transparent;
+    color: #bbbbbb;
+    cursor: pointer;
+    transition: border-color 120ms, color 120ms, background 120ms;
+  }
+  .btn:hover { border-color: #ffffff; color: #ffffff; }
+
+  .btn-primary { background: #ffffff; border-color: #ffffff; color: #000000; font-weight: 700; }
+  .btn-primary:hover { background: #e0e0e0; border-color: #e0e0e0; color: #000000; }
+
+  .btn-sm { padding: 5px 14px; font-size: 10px; letter-spacing: 1.5px; }
+
+  .btn-danger  { border-color: rgba(226,39,24,0.4); color: #e22718; }
+  .btn-danger:hover  { border-color: #e22718; background: rgba(226,39,24,0.08); color: #e22718; }
+
+  .btn-success { border-color: rgba(15,163,54,0.4); color: #0fa336; }
+  .btn-success:hover { border-color: #0fa336; background: rgba(15,163,54,0.08); color: #0fa336; }
+
+  .btn:disabled { opacity: 0.45; cursor: default; pointer-events: none; }
+
+  /* ── Chip ────────────────────────────────────────────────── */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    background: #262626;
+    color: #bbbbbb;
+    border: 1px solid #3c3c3c;
+    border-radius: 0;
+  }
+
+  /* ── Section title ───────────────────────────────────────── */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7e7e7e;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #3c3c3c;
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3c3c3c; }
+::-webkit-scrollbar-thumb:hover { background: #555555; }
