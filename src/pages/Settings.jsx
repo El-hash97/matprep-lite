@@ -10,7 +10,7 @@ function getAllMatNames(s) {
 }
 
 const LABEL = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Bricolage Grotesque', sans-serif",
   fontSize: '9px', fontWeight: 700,
   letterSpacing: '2px', textTransform: 'uppercase',
   color: '#7e7e7e',
@@ -61,7 +61,7 @@ export default function Settings({ settings, onSave, onReset }) {
         border: '1px solid #3c3c3c',
         borderLeft: '3px solid #1c69d4',
         borderRadius: 0,
-        fontFamily: "'Barlow Condensed', sans-serif",
+        fontFamily: "'Bricolage Grotesque', sans-serif",
         fontSize: '11px', fontWeight: 700,
         letterSpacing: '1px', textTransform: 'uppercase',
         color: '#bbbbbb',
@@ -84,7 +84,7 @@ export default function Settings({ settings, onSave, onReset }) {
               style={{ width: '90px', fontFamily: "'IBM Plex Mono', monospace", fontSize: '20px', fontWeight: 500 }}
             />
           </div>
-          <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#7e7e7e', paddingBottom: '2px' }}>
+          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#7e7e7e', paddingBottom: '2px' }}>
             contoh: {local.ratio} lot kecil = 1 lot besar = 1 penuangan
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function Settings({ settings, onSave, onReset }) {
             <div>
               {local[prod].map((m, i) => (
                 <div key={m.name} className="flex items-center gap-3 px-4 py-3" style={{ borderBottom: i < local[prod].length - 1 ? '1px solid #262626' : 'none' }}>
-                  <span style={{ flex: 1, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: '12px', color: '#bbbbbb', letterSpacing: '0.5px', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{m.name}</span>
+                  <span style={{ flex: 1, fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: '12px', color: '#bbbbbb', letterSpacing: '0.5px', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{m.name}</span>
                   <input
                     type="number"
                     min="0"
@@ -111,7 +111,7 @@ export default function Settings({ settings, onSave, onReset }) {
                     className="input-base text-right"
                     style={{ width: '70px', fontFamily: "'IBM Plex Mono', monospace", fontSize: '13px' }}
                   />
-                  <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e', minWidth: '56px' }}>
+                  <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e', minWidth: '56px' }}>
                     {m.unit}/lot
                   </span>
                 </div>
@@ -125,14 +125,14 @@ export default function Settings({ settings, onSave, onReset }) {
       <div className="card mb-5" style={{ padding: 0 }}>
         <div className="flex items-center justify-between px-5 py-4" style={{ borderBottom: '1px solid #3c3c3c' }}>
           <span style={LABEL}>Ukuran Karung per Material</span>
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '10px', color: '#7e7e7e', letterSpacing: '0.5px' }}>
+          <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '10px', color: '#7e7e7e', letterSpacing: '0.5px' }}>
             Dipakai untuk pembulatan ke karung penuh
           </span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2">
           {matNames.map((name, i) => (
             <div key={name} className="flex items-center gap-3 px-5 py-3" style={{ borderBottom: '1px solid #262626', borderRight: i % 2 === 0 ? '1px solid #262626' : 'none' }}>
-              <span style={{ flex: 1, fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: '12px', color: '#bbbbbb', letterSpacing: '0.5px', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</span>
+              <span style={{ flex: 1, fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: '12px', color: '#bbbbbb', letterSpacing: '0.5px', minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{name}</span>
               <input
                 type="number"
                 min="1"
@@ -141,7 +141,7 @@ export default function Settings({ settings, onSave, onReset }) {
                 className="input-base text-right"
                 style={{ width: '70px', fontFamily: "'IBM Plex Mono', monospace", fontSize: '13px' }}
               />
-              <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e', minWidth: '60px' }}>
+              <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '10px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e', minWidth: '60px' }}>
                 kg/karung
               </span>
             </div>
@@ -154,7 +154,7 @@ export default function Settings({ settings, onSave, onReset }) {
         <button className="btn btn-primary" onClick={handleSave}>Simpan Pengaturan</button>
         <button className="btn" onClick={handleReset}>Reset Default</button>
         {saved && (
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#0fa336' }}>
+          <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: '#0fa336' }}>
             ✓ Tersimpan
           </span>
         )}

@@ -16,7 +16,7 @@ export default function Topbar({ title }) {
     <header className="sticky top-0 z-10 bg-bg border-b border-hairline flex flex-col">
       <div className="flex items-center justify-between px-5 md:px-6" style={{ height: '52px' }}>
         <span style={{
-          fontFamily: "'Barlow Condensed', sans-serif",
+          fontFamily: "'Bricolage Grotesque', sans-serif",
           fontSize: '13px',
           fontWeight: 700,
           letterSpacing: '2px',

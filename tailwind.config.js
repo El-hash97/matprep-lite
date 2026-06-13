@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans:    ['"Barlow"', 'sans-serif'],
-        display: ['"Barlow Condensed"', 'sans-serif'],
+        sans:    ['"Bricolage Grotesque"', 'sans-serif'],
+        display: ['"Bricolage Grotesque"', 'sans-serif'],
         mono:    ['"IBM Plex Mono"', 'monospace'],
       },
       colors: {

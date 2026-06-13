@@ -76,7 +76,7 @@ function printBon(bon, date) {
 }
 
 const TH_STYLE = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Bricolage Grotesque', sans-serif",
   fontSize: '9px', fontWeight: 700,
   letterSpacing: '2px', textTransform: 'uppercase',
   color: '#7e7e7e',
@@ -121,7 +121,7 @@ export default function Calculator({ settings, onAddHistory }) {
           border: '1px solid #3c3c3c',
           borderLeft: '3px solid #1c69d4',
           borderRadius: 0,
-          fontFamily: "'Barlow Condensed', sans-serif",
+          fontFamily: "'Bricolage Grotesque', sans-serif",
           fontSize: '11px', fontWeight: 700,
           letterSpacing: '1px', textTransform: 'uppercase',
         }}>
@@ -175,7 +175,7 @@ export default function Calculator({ settings, onAddHistory }) {
               <div style={{ height: '1px', background: '#3c3c3c', margin: '12px 0' }} />
               <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '11px', color: '#7e7e7e', letterSpacing: '0.5px' }}>
                 = <strong style={{ color: ACCENT_COLOR[p], fontSize: '20px', fontWeight: 700 }}>{lb}</strong>
-                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginLeft: '4px' }}>lot besar</span>
+                <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginLeft: '4px' }}>lot besar</span>
               </div>
             </div>
           )
@@ -246,7 +246,7 @@ export default function Calculator({ settings, onAddHistory }) {
               <tbody>
                 {bon.rows.map((r, idx) => (
                   <tr key={r.name} style={{ background: idx % 2 === 0 ? 'transparent' : 'rgba(255,255,255,0.012)' }}>
-                    <td style={{ padding: '10px 12px', borderBottom: '1px solid #3c3c3c', fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: '13px', color: '#ffffff', letterSpacing: '0.5px' }}>{r.name}</td>
+                    <td style={{ padding: '10px 12px', borderBottom: '1px solid #3c3c3c', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: '13px', color: '#ffffff', letterSpacing: '0.5px' }}>{r.name}</td>
                     <td style={{ padding: '10px 12px', borderBottom: '1px solid #3c3c3c' }}>
                       {r.produks.map(prod => <ProdTag key={prod} prod={prod} />)}
                     </td>
@@ -255,7 +255,7 @@ export default function Calculator({ settings, onAddHistory }) {
                     <td style={{ padding: '10px 12px', borderBottom: '1px solid #3c3c3c', textAlign: 'right', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px', fontWeight: 700, color: '#1c69d4', whiteSpace: 'nowrap' }}>{r.final} {r.unit}</td>
                     <td style={{ padding: '10px 12px', borderBottom: '1px solid #3c3c3c', textAlign: 'right', fontFamily: "'IBM Plex Mono', monospace", fontSize: '14px', fontWeight: 700, color: '#ffffff', whiteSpace: 'nowrap' }}>
                       {r.karung}
-                      <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '1.5px', color: '#7e7e7e', marginLeft: '4px', textTransform: 'uppercase' }}>krg</span>
+                      <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '1.5px', color: '#7e7e7e', marginLeft: '4px', textTransform: 'uppercase' }}>krg</span>
                     </td>
                   </tr>
                 ))}
@@ -263,7 +263,7 @@ export default function Calculator({ settings, onAddHistory }) {
             </table>
           </div>
 
-          <p style={{ padding: '10px 20px 14px', fontFamily: "'Barlow Condensed', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e' }}>
+          <p style={{ padding: '10px 20px 14px', fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#7e7e7e' }}>
             * Bon Final dibulatkan ke karung penuh · Material gabungan dari beberapa produk sudah diakumulasi
           </p>
         </div>

@@ -5,6 +5,7 @@ import Topbar from './components/Topbar.jsx'
 import Calculator from './pages/Calculator.jsx'
 import History from './pages/History.jsx'
 import Settings from './pages/Settings.jsx'
+import Landing from './pages/Landing.jsx'
 import { DEF } from './data/defaults.js'
 
 function clone(o) { return JSON.parse(JSON.stringify(o)) }
@@ -18,6 +19,7 @@ const PAGE_TITLES = {
 }
 
 export default function App() {
+  const [showLanding, setShowLanding] = useState(true)
   const [page, setPage] = useState('calc')
   const [settings, setSettings] = useState(loadS)
   const [history, setHistory] = useState(loadH)
@@ -25,11 +27,15 @@ export default function App() {
   useEffect(() => { localStorage.setItem('mpl_s2', JSON.stringify(settings)) }, [settings])
   useEffect(() => { localStorage.setItem('mpl_h2', JSON.stringify(history)) }, [history])
 
-  const saveSettings = (next) => setSettings(next)
+  const saveSettings  = (next) => setSettings(next)
   const resetSettings = () => setSettings(clone(DEF))
-  const addHistory = (rec) => setHistory(prev => [rec, ...prev])
-  const deleteHistory = (id) => setHistory(prev => prev.filter(x => x.id !== id))
-  const clearHistory = () => setHistory([])
+  const addHistory    = (rec) => setHistory(prev => [rec, ...prev])
+  const deleteHistory = (id)  => setHistory(prev => prev.filter(x => x.id !== id))
+  const clearHistory  = () => setHistory([])
+
+  if (showLanding) {
+    return <Landing onEnter={() => setShowLanding(false)} />
+  }
 
   return (
     <div className="flex min-h-screen bg-bg">

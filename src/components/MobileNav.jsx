@@ -44,7 +44,7 @@ export default function MobileNav({ page, setPage }) {
               {ICONS[n.id]}
             </div>
             <span style={{
-              fontFamily: "'Barlow', sans-serif",
+              fontFamily: "'Bricolage Grotesque', sans-serif",
               fontSize: '10px', fontWeight: 400,
               letterSpacing: 0,
             }}>{n.label}</span>

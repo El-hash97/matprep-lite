@@ -15,11 +15,11 @@ export default function Sidebar({ page, setPage }) {
     <aside className="hidden md:flex fixed left-0 top-0 h-full w-[220px] bg-bg border-r border-hairline flex-col z-10">
       {/* Logo */}
       <div className="px-6 py-5 border-b border-hairline">
-        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '22px', fontWeight: 700, letterSpacing: '-0.5px', textTransform: 'uppercase', color: '#ffffff' }}>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '22px', fontWeight: 700, letterSpacing: '-0.5px', textTransform: 'uppercase', color: '#ffffff' }}>
           Mat<span style={{ color: '#1c69d4' }}>Prep</span>
-          <span style={{ fontFamily: "'Barlow', sans-serif", fontSize: '10px', fontWeight: 300, letterSpacing: '1px', color: '#7e7e7e', marginLeft: '6px', textTransform: 'uppercase', verticalAlign: 'middle' }}>Lite</span>
+          <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '10px', fontWeight: 300, letterSpacing: '1px', color: '#7e7e7e', marginLeft: '6px', textTransform: 'uppercase', verticalAlign: 'middle' }}>Lite</span>
         </div>
-        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', color: '#7e7e7e', marginTop: '2px', textTransform: 'uppercase' }}>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', color: '#7e7e7e', marginTop: '2px', textTransform: 'uppercase' }}>
           TMMIN · Casting Division
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function Sidebar({ page, setPage }) {
 
       {/* Footer */}
       <div className="px-6 py-4 border-t border-hairline">
-        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', color: '#7e7e7e', textTransform: 'uppercase', lineHeight: 1.8 }}>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '9px', fontWeight: 700, letterSpacing: '2px', color: '#7e7e7e', textTransform: 'uppercase', lineHeight: 1.8 }}>
           PT TMMIN<br />Casting · EPSD Sunter 2
         </div>
       </div>

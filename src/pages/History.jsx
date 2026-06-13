@@ -58,7 +58,7 @@ const BAR_OPTIONS = {
       backgroundColor: '#1a1a1a',
       borderColor: '#3c3c3c',
       borderWidth: 1,
-      titleFont: { family: "'Barlow Condensed', sans-serif", size: 11, weight: 700 },
+      titleFont: { family: "'Bricolage Grotesque', sans-serif", size: 11, weight: 700 },
       bodyFont: { family: "'IBM Plex Mono', monospace", size: 11 },
       titleColor: '#ffffff',
       bodyColor: '#bbbbbb',
@@ -67,7 +67,7 @@ const BAR_OPTIONS = {
   },
   scales: {
     x: {
-      ticks: { color: '#7e7e7e', font: { family: "'Barlow Condensed', sans-serif", size: 9, weight: 700 }, maxRotation: 35 },
+      ticks: { color: '#7e7e7e', font: { family: "'Bricolage Grotesque', sans-serif", size: 9, weight: 700 }, maxRotation: 35 },
       grid: { color: 'rgba(255,255,255,0.03)' },
       border: { color: '#3c3c3c' },
     },
@@ -83,7 +83,7 @@ function BarChart({ labels, data }) {
   if (labels.length === 0) {
     return (
       <div className="flex items-center justify-center h-[210px]" style={{
-        fontFamily: "'Barlow Condensed', sans-serif",
+        fontFamily: "'Bricolage Grotesque', sans-serif",
         fontSize: '11px', fontWeight: 700,
         letterSpacing: '2px', textTransform: 'uppercase',
         color: '#7e7e7e',
@@ -111,7 +111,7 @@ function BarChart({ labels, data }) {
 }
 
 const LABEL_STYLE = {
-  fontFamily: "'Barlow Condensed', sans-serif",
+  fontFamily: "'Bricolage Grotesque', sans-serif",
   fontSize: '9px', fontWeight: 700,
   letterSpacing: '2px', textTransform: 'uppercase',
   color: '#7e7e7e',
@@ -179,7 +179,7 @@ export default function History({ history, onDelete, onClear }) {
                 onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span style={{ fontFamily: "'Barlow', sans-serif", fontSize: '13px', fontWeight: 600, color: '#ffffff', letterSpacing: 0 }}>{h.date}</span>
+                  <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: '13px', fontWeight: 600, color: '#ffffff', letterSpacing: 0 }}>{h.date}</span>
                   <div className="flex gap-1.5">
                     <button className="btn btn-sm" onClick={() => printBon(h)} title="Cetak ulang">
                       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -238,7 +238,7 @@ export default function History({ history, onDelete, onClear }) {
               <tbody>
                 {totalKeys.map((k, idx) => (
                   <tr key={k}>
-                    <td style={{ padding: '10px 20px', borderBottom: idx < totalKeys.length - 1 ? '1px solid #3c3c3c' : 'none', fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: '13px', color: '#ffffff', letterSpacing: '0.5px' }}>{k}</td>
+                    <td style={{ padding: '10px 20px', borderBottom: idx < totalKeys.length - 1 ? '1px solid #3c3c3c' : 'none', fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: '13px', color: '#ffffff', letterSpacing: '0.5px' }}>{k}</td>
                     <td style={{ padding: '10px 20px', borderBottom: idx < totalKeys.length - 1 ? '1px solid #3c3c3c' : 'none', textAlign: 'right', fontFamily: "'IBM Plex Mono', monospace", fontWeight: 700, fontSize: '12px', color: '#1c69d4' }}>{totals[k].v.toFixed(1)} {totals[k].unit}</td>
                   </tr>
                 ))}
